@@ -1,0 +1,32 @@
+Clássico jogo "Pedra, papel ou tesoura!" em javascript:
+
+Antes de tudo, três variáveis são declaradas: placaruser (que se refere ao placar do usuário), 
+placarcomp (que se refere ao placar do computador) e vencedor, todas estas variáveis igual a zero.
+
+Todo o jogo é iniciado quando o usuário aperta no botão chamado "Clique aqui!" que iniciará a função 
+chamada iniciar(). Após iniciada essa função, um alert é mostrado para o usuário com o objetivo do mesmo 
+poder se preparar para iniciar o jogo assim que clicado no ok.
+
+Para todo o jogo ser executado o primeiro comando é manter o código executando enquanto a variável vencedor for menor que 3.
+
+Logo após, é declarada uma variável chamada userChoice (que é a escolha do usuário), que chegará por prompt. 
+Após isso é apresentado ao usuário pelo console o que ele escolheu.
+
+Feito isso, o computador precisa fazer a escolha dele, e esta é feita por uma propriedade chamada Math.random, 
+a qual gera um número aleatório entre 0 e 1. Posteriormente foi escolhido números múltiplos para verificarmos a escolha 
+do computador: se o math.random gerar um número menor que 0.34, a escolha do computador será pedra, senão, se o número 
+gerado for menor ou igual a 0.67, a escolha do computador será papel, e senão cair em nenhuma destas verificações
+a escolha do computador será papel. Após, é mostrado a escolha do computador pelo console e inicia-se as comparações.
+
+Se as duas escolhas forem iguais, retorna que o resultado é um empate. Senão, se a escolha do usuário for pedra e 
+o computador escolher tesoura, aumenta em um o placar do usuário e retorna que o usuário venceu e mostra o placar 
+como está no momento atual. Senão, o computador só pode ter vencido, pois já não ocorreu empate, e já foi a verificação 
+de tesoura, então só pode ser papel. Neste caso retorna que o computador venceu e aumenta em um o placar do computador.
+
+Após isso é feita a verificação se a escolha do usuário for papel, e posteriormente se a escolha do usuário for tesoura.
+
+Finalmente é verificado se o placar do usuário é igual a 3 e, se sim, mostra um alert que o usuário venceu. 
+Senão, se o placar do computador for igual a 3, mostra um alert dizendo que o computador venceu.
+
+Após alguém ter vencido, o usuário só poderá começar um novo jogo se apertar no botão "novo jogo", que chamará a 
+função novoJogo() que simplesmente declara novamente as variáveis placaruser, placarcomp e vencedor igual a 0.
